@@ -12,9 +12,7 @@ require('../db/conn');
 require('../model/userSchema');
 require("../model/postSchema");
 
-router.get('/', (req,res) =>{
-    res.send(`Hello router`)
-});
+
 
 router.post('/login', async(req,res)=>{
     
