@@ -13,7 +13,7 @@ require('../model/userSchema');
 require("../model/postSchema");
 
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'C:\Users\Snigdha Patwatkar\Desktop\tattle react\server\tattle\public\index.html'), function(err) {
+    res.sendFile(path.join(__dirname, '../tattle/public/index.html'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
