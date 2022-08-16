@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    font-size: 60%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.mainNav{
+    padding-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5rem 1fr 1fr 10rem;
+    background-color: #2E86C1;
+   
+}
+
+.logo{
+    display: grid;
+    grid-column: 2/3;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-link{
+    padding-top: 14px;
+    grid-column: 3/4;
+}
+
+.menu-link ul{
+    /* height: 10rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-link ul li{
+    font-size: 2rem;
+}
+
+.menu-link a{
+    color: white;
+    transition: 0.5s;
+}
+
+.menu-link ul li:hover > a{
+    transform-origin:  left;
+    color: #4A235A ;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.hamburger{
+    display: none;
+} 
+
+@media (max-width:998px) {  
+    .mainNav {
+        height: 10rem;
+        grid-template-columns:  1rem 5fr 0.5fr 1rem;
+        background-color: #2E86C1;
+      }
+    
+    .menu-link{
+        display: none;
+    }
+
+    .mobile-menu-link {
+        grid-column: 2/4;
+        position: fixed;
+        z-index: 99;
+        top: 95px;
+        right: 1px;
+      }
+    
+      .mobile-menu-link {
+        padding: 10px;
+        background-color: #2E86C1;
+        height: 20rem;
+        display: grid;
+        grid-column: 2/5;
+        align-items: center;
+        padding-left: 3rem;
+        transition: all 2s linear;
+        transform-origin: top;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    
+      .mobile-menu-link ul {
+        height: 20rem;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column; 
+        align-items: start; 
+      }
+    
+      .mobile-menu-link ul li:first-child {
+        transition-delay: 0.2s;
+      }
+
+    .hamburger{
+        float: right;
+        padding-top: 1px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+    }  
+
+    .hamb{
+        color: white;
+    }
+}

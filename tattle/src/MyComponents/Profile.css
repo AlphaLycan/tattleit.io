@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.info h3{
+    color: dark grey;
+    font-size: 30px;
+    display: flex;
+}
+
+.info h4{
+    color: dark grey;
+    font-size: 16px;
+}
+
+.info h3{
+    color: dark grey;
+    font-size: 30px;
+}
+
+.my_posts{
+    display: block;
+    
+}
+
+.box h3{
+    color: dark grey;
+    font-size: 30px;
+}
+
+.my_posts h4{
+    font-size: 16px;
+}
+
+.post_box{
+    display: block;
+}
+
+.post_box h4{
+    display: inline-block;
+}
+
+.del_icon{
+    color: grey;
+    margin: 5px;
+}
+
+.form_chat{
+    display: inline-block;
+}

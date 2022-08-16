@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.chatting{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxx{
+    width: 800px;
+    padding: 10px;
+    font-size: 16px;
+    height: 150px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.extras{
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+
+.details{
+    width: 790px;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+h4{
+    background-color: grey;
+    padding: 5px;
+    color: white;
+    animation: fadeIn 0.5s forwards;
+    border-radius: 2px;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.emoji{
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+}
+.sticker{
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+}
+.gif{
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.bttn{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 90px;
+}
+
+.btn{
+    width: 100px;
+    border: none;
+    background-color: #2E86C1;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 40px;
+
+}
+
+@media (max-width:998px) {  
+    .bttn{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .btn{
+        width: 100px;
+        border: none;
+        background-color: #2E86C1;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        height: 40px;
+    
+    }
+}
+
+.post{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxing{
+    width: 800px;
+    padding: 10px;
+    font-size: 16px;
+    height: auto;
+    border-color: black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.get_date{
+    color: grey;
+    font-size: 12px;
+}
