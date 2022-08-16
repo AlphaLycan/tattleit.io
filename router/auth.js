@@ -76,46 +76,43 @@ router.post('/register',async (req,res) => {
         }
         else{
             const user = new User({name,email,collegename,password,cpassword});
-
-            var flag = false;
-            //verification
-            var https = require("https");
-            var api_key = process.env.API_KEY;
-            var Admin_email = email;
-            var ip_address = "";
-
-            var options = {
-                hostname: 'api.zerobounce.net',
-                port: 443,
-                path: "/v2/validate?api_key="+api_key+"&email="+Admin_email+"&ip_address='"+ip_address+"'",
-                method: 'GET',
-                secureProtocol: "TLSv1_2_method"
-            }
-
-            https.request(options, res => {
-                let body = '';
-                res.on('data', d => body += d)
-                res.on('end', () => {
-                    var result = JSON.parse(body);
-                // DO SOMETHING WITH result JSON
-                if(result.status === 'valid'){
-                    flag = true
-                }
-
-                })
-            }).on('error', err => {
-
-                //DO SOMETHING FOR ERRORS
-                window.alert('invalid email')
-                return;
-
-            }).end()
-            if(flag){
             await user.save();
             res.status(201).json({message: "user registered."});
-            }else{
-            res.status(422).json({message: "user registered."});
-            }
+
+            // var flag = false;
+            
+            // var https = require("https");
+            // var api_key = process.env.API_KEY;
+            // var Admin_email = email;
+            // var ip_address = "";
+
+            // var options = {
+            //     hostname: 'api.zerobounce.net',
+            //     port: 443,
+            //     path: "/v2/validate?api_key="+api_key+"&email="+Admin_email+"&ip_address='"+ip_address+"'",
+            //     method: 'GET',
+            //     secureProtocol: "TLSv1_2_method"
+            // }
+
+            // https.request(options, res => {
+            //     let body = '';
+            //     res.on('data', d => body += d)
+            //     res.on('end', () => {
+            //         var result = JSON.parse(body);
+            //     // DO SOMETHING WITH result JSON
+            //     if(result.status === 'valid'){
+            //         flag = true
+            //     }
+
+            //     })
+            // }).on('error', err => {
+
+            //     //DO SOMETHING FOR ERRORS
+            //     window.alert('invalid email')
+            //     return;
+
+            // }).end()
+            
         }
         
     } catch (error) {
