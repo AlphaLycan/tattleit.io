@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 const authenticate = require('../middleware/authenticate')
 const Chat123 = require('../model/postSchema')
 const clgN = require('../model/clgSchema')
-const Dmceclg = require('../model/dmceANSchema');
 const { db } = require('../model/userSchema');
 
 require('../db/conn');
