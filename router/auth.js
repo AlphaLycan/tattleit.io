@@ -14,15 +14,6 @@ require('../model/userSchema');
 require("../model/postSchema");
 
 
-// router.get('/*', function(req, res) {
-//     res.sendFile(path.join(__dirname, '../tattle/build', '../tattle/public/index.html'), function(err) {
-//       if (err) {
-//         res.status(500).send(err)
-//       }
-//     })
-//   })
-
-
 router.post('/login', async(req,res)=>{
     
     try {
