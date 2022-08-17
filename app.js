@@ -6,14 +6,12 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 dotenv.config({path: './config.env'});
 require('./db/conn');
-
+// process.env.PORT || 
 const PORT = process.env.PORT || 8080;
 const User = require('./model/userSchema');
 const Chat = require("./model/postSchema");
 app.use(express.json());
 app.use(require('./router/auth'));
-
-
 
 if(process.env.NODE_ENV == 'production'){
     app.use(express.static('tattle/build'));

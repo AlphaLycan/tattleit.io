@@ -15,7 +15,7 @@ require("../model/postSchema");
 
 router.use(express.static(path.join(__dirname, '../tattle/build')));
 router.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../tattle/public/index.html'), function(err) {
+    res.sendFile(path.join(__dirname,'../tattle/build', '../tattle/public/index.html'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
