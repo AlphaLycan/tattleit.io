@@ -8,7 +8,7 @@ import Home from './MyComponents/Home';
 import Profile from "./MyComponents/Profile";
 import Account from "./MyComponents/account";
 import Logout from './MyComponents/LogOut';
-import PageNotFound from './MyComponents/NoPageFound'
+// import PageNotFound from './MyComponents/NoPageFound'
 import './App.css';
 
 export const UserContext = createContext(); 
