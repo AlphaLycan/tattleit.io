@@ -13,14 +13,6 @@ const Chat = require("./model/postSchema");
 app.use(express.json());
 app.use(require('./router/auth'));
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../tattle/public/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
-
 
 if(process.env.NODE_ENV == 'production'){
     app.use(express.static('tattle/build'));
