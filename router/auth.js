@@ -13,6 +13,7 @@ require('../db/conn');
 require('../model/userSchema');
 require("../model/postSchema");
 
+router.use(express.static(path.join(__dirname, '../tattle/build')));
 router.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, '../tattle/public/index.html'), function(err) {
       if (err) {
