@@ -13,9 +13,9 @@ require('../db/conn');
 require('../model/userSchema');
 require("../model/postSchema");
 
-router.use(express.static(path.join(__dirname, '../tattle/build')));
+
 router.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../tattle/public/index.html'), function(err) {
+    res.sendFile(path.join(__dirname,'../tattle/build', '../tattle/public/index.html'), function(err) {
       if (err) {
         res.status(500).send(err)
       }
@@ -130,12 +130,12 @@ router.post('/register',async (req,res) => {
 
 });
 
-router.get('/myprofile', (req,res) =>{
+router.get('/myprofile',authenticate, (req,res) =>{
     res.send(req.verifyuser)
     
 });
 
-router.post('/chatlog', async (req,res) =>{
+router.post('/chatlog',authenticate, async (req,res) =>{
     const{chatt}= req.body;
     var{userEmail} = req.body;
     var {clgN} = req.body;
@@ -154,14 +154,14 @@ router.post('/chatlog', async (req,res) =>{
     
 });
 
-router.get('/chatting', async (req,res) =>{
+router.get('/chatting',authenticate, async (req,res) =>{
     const collegename = req.verifyuser.collegename;
     const verifypost = await Chat123.find({clgN:collegename})
     res.send(verifypost)
    
 });
 
-router.get('/get_posts', async(req,res)=>{
+router.get('/get_posts',authenticate, async(req,res)=>{
     var{userEmail} = req.body;
     userEmail = req.verifyuser.email
     const verifypost = await Chat123.find({userEmail:userEmail})    
