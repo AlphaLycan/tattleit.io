@@ -9,6 +9,7 @@ import Profile from "./MyComponents/Profile";
 import Account from "./MyComponents/account";
 import Logout from './MyComponents/LogOut';
 import PageNotFound from './MyComponents/NoPageFound'
+import AboutUs from './MyComponents/AboutUs'
 import './App.css';
 
 export const UserContext = createContext(); 
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/Account" element={<Account/>} />
       <Route path="/profile" element={<Profile/>} />
       <Route path="/Logout" element={<Logout/>} />
+      <Route path="/About" element={<AboutUs/>} />
       <Route path='/*' element={<PageNotFound/>} />
 
       </Routes>
