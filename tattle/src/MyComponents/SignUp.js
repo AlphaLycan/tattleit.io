@@ -109,7 +109,9 @@ export default function SignUp() {
        <RiLockPasswordFill/><label htmlFor="cpassword">Confirm Password</label>
        <input type="password" id="cpassword" name="cpassword" placeholder='Confirm Your Password' value={user.cpassword} onChange = {handleInputs} /><br></br>
 
-        <label></label>
+       <label className='check'><input type='checkbox' />I agree to all the terms and conditions. (For more information please read About page.)</label>
+
+     
        <button className='btn btn-primary' type='submit' onClick={PostData}>Submit</button>
        <h5>Already registered?<Link to='/SignIn'>SignIn</Link></h5>
        </form>

@@ -21,7 +21,7 @@ import { UserContext } from '../App';
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/SignIn'>Login</Link></li>
                     <li><Link to='/SignUp'>Register</Link></li>
-                    <li><Link to='/About'>About Us</Link></li>
+                    <li><Link to='/About'>About</Link></li>
 
                 </>);
                 

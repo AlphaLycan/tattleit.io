@@ -125,9 +125,11 @@ h4{
     border-color: black;
     border-radius: 5px;
     background-color: white;
+    overflow: scroll;
+    height: 500px;
 }
 
-.get_date{
-    color: grey;
-    font-size: 12px;
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }

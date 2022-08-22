@@ -43,7 +43,14 @@ form select{
     width: 100%;
 }
 
+.check{
+    display: flex;
+}
 
+.check input{
+   width: 20px;
+   height: 20px;
+}
 
 input{
     /* text-decoration: underline #2E86C1; */
@@ -69,6 +76,5 @@ input{
 @media (max-width:998px) { 
     .register-pg{
         padding-top: 200px;
-        background-color:  rgba(30,30,30,0.5);
     }
 }

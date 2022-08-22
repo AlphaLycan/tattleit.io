@@ -6,7 +6,7 @@
 }
 
 .about{
-    height: 80vh;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,4 +23,61 @@
     margin-left: 10px;
     font-size: 3rem;
     color: white;
+}
+
+.privacy{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.privacy h1{
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.privacy h2{
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+
+.privacy ul li{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.privacy p{
+    margin-left: 10px;
+    font-size: 2rem;
+    color: white;
+
+}
+
+.scrolling{
+    overflow: scroll;
+    height: 500px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+@media (max-width:600px) {  
+    .about{
+        padding: 10px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .about h1{
+        padding-top: 15px;
+    }
 }
