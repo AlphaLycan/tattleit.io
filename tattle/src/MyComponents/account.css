@@ -115,6 +115,8 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
+    height: 500px;
 }
 
 .boxing{
@@ -125,8 +127,6 @@ h4{
     border-color: black;
     border-radius: 5px;
     background-color: white;
-    overflow: scroll;
-    height: 500px;
 }
 
 ::-webkit-scrollbar {
