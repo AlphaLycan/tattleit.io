@@ -64,10 +64,9 @@ export default function Account() {
 }
 
   //likes
-  const [like, setlike] = useState(0)
-  const [likeactive, setlikeactive] = useState(false)
-
-  function likef(){
+  function Likef(){
+    const [like, setlike] = useState(0)
+    const [likeactive, setlikeactive] = useState(false)
     if(likeactive){
       setlikeactive(false)
       setlike(like-1)
@@ -122,7 +121,7 @@ export default function Account() {
           <div className='post'>
           <div className='boxing'>
             {CurrE.chatt}
-          <FcLike role='button' onClick={likef} size={42}></FcLike>{like}
+          <FcLike role='button' onClick={Likef} size={14}></FcLike>{Likef.like}
           </div>
           </div>
         )
