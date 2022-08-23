@@ -122,7 +122,7 @@ export default function Account() {
           <div className='post'>
           <div className='boxing'>
             {CurrE.chatt}
-          <FcLike className='likebtn' role='button' onClick={likef}>{like}</FcLike>
+          <FcLike role='button' onClick={likef} size={42}></FcLike>{like}
           </div>
           </div>
         )
