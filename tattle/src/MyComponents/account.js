@@ -4,7 +4,6 @@ import "./account.css"
 // import {BiSticker} from "react-icons/bi"
 // import {MdOutlineGif} from "react-icons/md"
 import { useNavigate } from 'react-router-dom'
-import {FcLike} from 'react-icons/fc'
 
 export default function Account() {
   const navigate = useNavigate();  
@@ -63,19 +62,6 @@ export default function Account() {
       
 }
 
-  //likes
-  function Likef(){
-    const [like, setlike] = useState(0)
-    const [likeactive, setlikeactive] = useState(false)
-    if(likeactive){
-      setlikeactive(false)
-      setlike(like-1)
-    }else{
-      setlikeactive(true)
-      setlike(like+1)
-    }
-  }
-
   return (
     <>
      <form method='POST'>
@@ -121,7 +107,6 @@ export default function Account() {
           <div className='post'>
           <div className='boxing'>
             {CurrE.chatt}
-          <FcLike role='button' onClick={Likef} size={14}></FcLike>{Likef.like}
           </div>
           </div>
         )
