@@ -62,7 +62,19 @@ export default function Account() {
       
 }
 
+  //likes
+  const [like, setlike] = useState()
+  const [likeactive, setlikeactive] = useState(false)
 
+  function likef(){
+    if(likeactive){
+      setlikeactive(false)
+      setlike(like-1)
+    }else{
+      setlikeactive(true)
+      setlike(like+1)
+    }
+  }
 
   return (
     <>
@@ -109,6 +121,7 @@ export default function Account() {
           <div className='post'>
           <div className='boxing'>
             {CurrE.chatt}
+          <button onClick={likef}>like {like}</button>
           </div>
           </div>
         )
